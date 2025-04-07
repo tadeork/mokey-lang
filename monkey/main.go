@@ -14,7 +14,7 @@ func main() {
 	for {
 		tok := l.NextToken()
 		fmt.Println(tok)
-		// fmt.Printf("Type %s, Literal: %s\n", tok.Type, tok.Literal)
+		fmt.Printf("Type %s, Literal: %s\n", tok.Type, tok.Literal)
 
 		if tok.Type == token.EOF {
 			break
