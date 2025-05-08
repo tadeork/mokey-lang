@@ -18,7 +18,7 @@ func TestLetStatement(t *testing.T) {
 	p := New(l)
 
 	program := p.ParseProgram()
-	// checkParserErrors(t, p)
+	checkParserErrors(t, p)
 
 	if program == nil {
 		t.Fatalf("ParseProgram() returned nil")
@@ -34,8 +34,6 @@ func TestLetStatement(t *testing.T) {
 		{"y"},
 		{"foobar"},
 	}
-
-	t.Log("Statement")
 
 	for i, tt := range tests {
 		stmt := program.Statements[i]
